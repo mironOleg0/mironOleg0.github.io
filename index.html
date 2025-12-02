@@ -8,7 +8,25 @@
     body { font-family: Arial, sans-serif; background: #f6f6f6; margin: 0; padding: 0; color: #333; }
     .container { max-width: 1000px; margin: auto; padding: 20px; }
     header { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; }
-    .avatar { width: 90px; height: 90px; background: linear-gradient(135deg, #6366f1, #14b8a6); border-radius: 20px; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: bold; }
+   .avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%; /* круг */
+  overflow: hidden;   /* обрезает лишнее */
+  flex-shrink: 0;     /* не сжимать при флекс-раскладке */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;   /* фон на случай прозрачного фото */
+}
+
+.avatar img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;  /* сохраняет пропорции и заполняет круг */
+  display: block;
+}
+
     h1 { margin: 0; font-size: 28px; }
     .contacts a { color: #333; text-decoration: underline; font-size: 14px; }
     .grid { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; }
@@ -37,6 +55,7 @@
     </div>
   </div>
 </header>
+
 
 <div class="grid">
   <aside class="card">
@@ -120,6 +139,7 @@ students and postgraduates of BSU
 </body>
 
 </html>
+
 
 
 
